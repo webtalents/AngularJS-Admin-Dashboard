@@ -1,0 +1,15 @@
+<div id="layout-horizontal-navigation" class="template-layout" layout="column" flex>
+
+    <md-toolbar id="toolbar" class="md-menu-toolbar" ui-view="toolbar"></md-toolbar>
+
+    <div id="horizontal-navigation" class="md-whiteframe-1dp" ui-view="navigation"></div>
+
+    <div id="content-container" flex layout="column">
+        <md-content id="content" class="animate-slide-up md-background md-hue-1" ms-scroll
+                    ui-view="content" flex></md-content>
+    </div>
+
+    <md-sidenav id="quick-panel" class="md-sidenav-right md-whiteframe-4dp" md-component-id="quick-panel"
+                ms-scroll ui-view="quickPanel"></md-sidenav>
+
+</div>

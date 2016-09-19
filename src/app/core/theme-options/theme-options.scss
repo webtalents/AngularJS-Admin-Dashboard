@@ -1,0 +1,92 @@
+$theme-panel-width: 220px;
+$theme-panel-button-width: 48px;
+
+.ms-theme-options-backdrop {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 49;
+}
+
+.ms-theme-options {
+    position: fixed;
+    top: 160px;
+    right: 0;
+    z-index: 50;
+
+    &.open {
+        .ms-theme-options-panel {
+            transform: translateX(0);
+
+            .ms-theme-options-panel-button {
+                opacity: 1;
+                box-shadow: $whiteframe-shadow-8dp;
+            }
+        }
+
+        .ms-theme-options-list {
+            box-shadow: $whiteframe-shadow-8dp;
+        }
+    }
+
+    .ms-theme-options-panel {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: $theme-panel-width + $theme-panel-button-width;
+        transform: translateX($theme-panel-width);
+        transition: transform 0.225s ease-in-out;
+        pointer-events: none;
+
+        .ms-theme-options-panel-button {
+            box-shadow: $whiteframe-shadow-4dp;
+            width: $theme-panel-button-width;
+            height: $theme-panel-button-width;
+            line-height: $theme-panel-button-width;
+            text-align: center;
+            cursor: pointer;
+            border-radius: 0;
+            margin: 0;
+            pointer-events: auto;
+            opacity: 0.75;
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+
+        .ms-theme-options-list {
+            width: $theme-panel-width;
+            min-width: $theme-panel-width;
+            max-width: $theme-panel-width;
+            background: #FFFFFF;
+            z-index: 12;
+            pointer-events: auto;
+
+            .theme-option {
+                padding: 16px;
+
+                md-radio-button {
+                    margin: 8px;
+                }
+
+                .option-title {
+                    font-size: 14px;
+                    font-weight: 500;
+                    padding: 0 8px 12px 8px;
+                }
+
+                .theme {
+                    padding: 4px 8px;
+
+                    .theme-button {
+                        border-right: 8px solid;
+                        text-align: left;
+                    }
+                }
+            }
+        }
+    }
+}

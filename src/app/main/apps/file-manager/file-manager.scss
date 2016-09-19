@@ -1,0 +1,169 @@
+#file-manager {
+
+	.icon-chevron-right {
+		color: rgba(0, 0, 0, 0.68) !important
+	}
+
+	.center {
+
+		.header {
+			position: relative;
+
+			.header-content {
+				height: 100%;
+
+				.breadcrumb {
+					font-size: 24px;
+					padding-left: 90px;
+
+					span {
+						cursor: pointer;
+
+						md-icon {
+							cursor: default;
+						}
+
+						&:last-child {
+
+							md-icon {
+								display: none;
+							}
+						}
+					}
+
+					.separator {
+						margin-left: 8px;
+						margin-right: 8px;
+					}
+				}
+			}
+
+			.add-file-button {
+				position: absolute;
+				bottom: -32px;
+				left: 16px;
+			}
+		}
+
+		.content {
+			padding: 0;
+			background: #FFFFFF;
+		}
+	}
+
+	.file-icon {
+
+		.icon-folder {
+
+			&:before {
+				color: #FFB300;
+			}
+		}
+
+		.icon-document {
+
+			&:before {
+				color: #1565C0;
+			}
+		}
+
+		.icon-spreadsheet {
+
+			&:before {
+				color: #4CAF50;
+			}
+		}
+
+		.icon-file-pdf {
+
+			&:before {
+				color: #f41d25;
+			}
+		}
+	}
+}
+
+.create-document-dialog {
+	> div {
+		display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    overflow: auto;
+    font-size: 1.6rem;
+	}
+	.document-type {
+		height: 70px;
+	}
+
+	.document-type div:first-child {
+		border-right: 1px solid silver;
+	}
+
+	.document-type div {
+		font-weight: 300;
+    color: rgba(119, 119, 119, 0.82);
+    height: 60px;
+    padding-top: 20px;
+    border-bottom: 1px solid silver;
+    cursor: pointer;
+	}
+
+	.document-type div.active {
+		font-weight: 400;
+		background-color: #e8e8e8;
+	}
+}
+
+.header .logo {
+  max-width: 200px;
+  max-height: 100px;
+}
+
+// Icons
+
+.icon-file-image {
+	color: #27AE60;
+}
+
+// RESPONSIVE
+@media screen and (max-width: $layout-breakpoint-md) {
+
+	#file-manager {
+
+		.center {
+
+			.header {
+
+				.header-content {
+
+					.breadcrumb {
+						font-size: 18px;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: $layout-breakpoint-sm) {
+
+	#file-manager {
+
+		.center {
+
+			.header {
+
+				.header-content {
+
+					.breadcrumb {
+						font-size: 16px;
+					}
+				}
+			}
+		}
+	}
+}

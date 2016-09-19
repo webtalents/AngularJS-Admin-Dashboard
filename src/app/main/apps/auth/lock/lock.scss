@@ -1,0 +1,85 @@
+#lock {
+    height: 100%;
+    background: url('/assets/images/backgrounds/march.jpg') no-repeat;
+    background-size: cover;
+
+    #lock-form-wrapper {
+        flex: 1 0 auto;
+        padding: 32px;
+
+        #lock-form {
+            padding: 48px 32px 32px 32px;
+            width: 384px;
+            max-width: 384px;
+            background: #FFFFFF;
+
+            .title {
+                margin-bottom: 8px;
+                font-size: 17px;
+            }
+
+            .subtitle {
+                color: rgba(0, 0, 0, 0.54);
+            }
+
+            .avatar-container {
+                position: relative;
+                margin-right: 16px;
+
+                md-icon {
+                    position: absolute;
+                    top: -3px;
+                    right: 2px;
+                }
+            }
+
+            form {
+                width: 100%;
+                margin: 32px 0 0 0;
+
+                .submit-button {
+                    width: 220px;
+                    margin: 32px auto;
+                    display: block;
+                }
+            }
+
+            .message {
+                font-weight: 500;
+                text-align: center;
+            }
+        }
+    }
+}
+
+// RESPONSIVE
+@media screen and (max-width: $layout-breakpoint-sm) {
+
+    #lock {
+
+        #lock-form-wrapper {
+            padding: 16px;
+
+            #lock-form {
+                padding: 24px;
+                width: 100%;
+
+                .subtitle {
+                    text-align: center;
+                }
+
+                .avatar-container {
+                    margin-bottom: 10px;
+                }
+
+                form {
+
+                    .md-button {
+                        width: 90%;
+                    }
+                }
+            }
+        }
+    }
+
+}

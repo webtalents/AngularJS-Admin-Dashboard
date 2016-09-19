@@ -1,0 +1,10 @@
+#quick-panel {
+
+    .today-tab {
+        .date {
+            > md-list-item {
+                min-height: 115px;
+            }
+        }
+    }
+}

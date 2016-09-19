@@ -1,0 +1,164 @@
+<md-dialog class="create-user-dialog" aria-label="New Message">
+  <form class="md-inline-form " >
+    <md-toolbar class="md-accent md-hue-2">
+        <div class="md-toolbar-tools" layout="row" layout-align="space-between center">
+            <span class="title" >Edit User</span>
+            <md-button class="md-icon-button" ng-click="vm.hide()" aria-label="Close dialog">
+                <md-icon md-font-icon="icon-close"></md-icon>
+            </md-button>
+        </div>
+    </md-toolbar>
+
+    <div layout="row" layout-align="center center">
+        <div ng-show="error" class="alert alert-danger">{{errorMessage}}</div>
+    </div>  
+
+    <md-dialog-content ms-scroll>  
+      <div layout>
+        <div flex='50'>
+
+          <md-input-container class="md-icon-float md-block">
+
+            <label>First Name (required)</label>
+            <md-icon md-font-icon="icon-account"></md-icon>
+            <input ng-model="vm.firstname" type="text" required>
+
+          </md-input-container>
+
+        </div>
+
+        <div flex='50'>
+
+          <md-input-container class="md-icon-float md-block">
+
+            <label>Last name</label>
+            <md-icon md-font-icon="icon-user"></md-icon>
+            <input ng-model="vm.lastname" type="text">
+
+          </md-input-container>
+
+        </div>
+      </div>
+
+      <div layout>
+        <div flex='50'>
+
+          <md-input-container class="md-icon-float md-block">
+
+            <label>Email</label>
+            <md-icon md-font-icon="icon-email"></md-icon>
+            <input ng-model="vm.email" type="email" >
+
+          </md-input-container>
+
+        </div>
+
+        <div flex='50'>
+
+          <md-input-container class="md-icon-float md-block">
+
+            <label>Phone number</label>
+            <md-icon md-font-icon="icon-phone"></md-icon>
+            <input ng-model="vm.phonenumber" type="text">
+
+          </md-input-container>
+
+        </div>
+      </div>
+
+      <div layout>
+        <div flex='50'>
+
+          <md-input-container class="md-icon-float md-block">
+
+            <label>Company</label>
+            <md-icon md-font-icon="icon-domain"></md-icon>
+            <input ng-model="vm.company" type="text" required>
+
+          </md-input-container>
+
+        </div>
+
+        <div flex='50'>
+
+          <md-input-container class="md-icon-float md-block">
+
+            <label>Job title</label>
+            <md-icon md-font-icon="icon-school"></md-icon>
+            <input ng-model="vm.jobtitle" type="text">
+
+          </md-input-container>
+
+        </div>
+      </div>
+      
+      <div layout>
+        <div flex='50'>
+
+          <!-- <md-input-container class="md-icon-float md-block">
+
+            <label>Select Portal/s</label>
+            <md-icon md-font-icon="icon-tile-four"></md-icon>
+            <input ng-model="user.name" type="text" required>
+
+          </md-input-container> -->
+          <md-input-container class="md-icon-float md-block">
+            <md-icon md-font-icon="icon-tile-four"></md-icon>
+            <md-select flex placeholder="Select Portal/s" 
+                ng-model="vm.selected_portals" ng-model-options="{trackBy: '$value._id'}" ng-change="portals_change()" multiple>
+
+                <md-option ng-value="portal" ng-repeat="portal in portals">{{portal.title}}</md-option>
+            </md-select>
+          </md-input-container>
+        </div>
+
+
+
+        <!-- <div layout> -->
+            
+
+        <div flex='50'>
+
+          <!-- <md-input-container class="md-icon-float md-block">
+
+            <label>Select Properties</label>
+            <md-icon md-font-icon="icon-schoolcube"></md-icon>
+            <input ng-model="user.name" type="text">
+
+          </md-input-container> -->
+          <md-input-container class="md-icon-float md-block">
+            <md-icon md-font-icon="icon-cube"></md-icon>
+            <md-select flex placeholder="Select Properties" 
+                ng-model="vm.selected_properties" ng-model-options="{trackBy:'$value._id'}" ng-change="properties_change()" multiple>
+
+                <md-option ng-value="property" ng-repeat="property in properties">{{property.title}}</md-option>
+            </md-select>
+          </md-input-container>
+
+        </div>
+      </div>
+
+    </md-dialog-content>
+
+    <md-dialog-actions layout="row" layout-align="space-between center">
+        <div layout="row" layout-align="start center">
+            <md-button ng-click="vm.updateUser()" 
+              class="send-button md-accent md-raised" aria-label="Send" >
+                UPDATE USER
+            </md-button>
+
+            <md-button ng-click="vm.resetPassword()" 
+              class="send-button md-accent md-raised" aria-label="Send" >
+                RESET PASSWORD
+            </md-button>
+        </div>
+
+<!--         <div layout="row">
+            <md-button class="md-icon-button" aria-label="Delete">
+                <md-icon md-font-icon="icon-delete"></md-icon>
+            </md-button>
+        </div> -->
+    </md-dialog-actions>
+
+  </form>
+</md-dialog>

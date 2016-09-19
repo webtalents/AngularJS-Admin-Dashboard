@@ -1,0 +1,127 @@
+<div layout="row" layout-align="start center">
+  <div layout="row" layout-align="start center" flex>
+    <md-button id="navigation-toggle" class="md-icon-button" 
+      ng-click="vm.toggleSidenav('navigation')"
+      hide-gt-sm aria-label="Toggle navigation" translate
+      translate-attr-aria-label="TOOLBAR.TOGGLE_NAVIGATION">
+
+      <md-icon md-font-icon="icon-menu" class="icon"></md-icon>
+
+    </md-button>
+
+    <div class="toolbar-separator"></div>
+
+    <md-progress-circular id="toolbar-progress" 
+      ng-if="$root.loadingProgress" class="md-accent"
+      md-mode="indeterminate" md-diameter="64">
+    </md-progress-circular>
+  </div>
+
+  <div layout="row" layout-align="start center">
+    
+    <md-menu-bar id="portal-menu">
+      <md-menu md-position-mode="left bottom">
+        <md-button class="toolbar-button" ng-click="$mdOpenMenu()"
+          aria-label="User settings"
+          translate translate-attr-aria-label="TOOLBAR.USER_SETTINGS">
+
+          <div layout="row" layout-align="space-between center">
+            <div class="avatar-wrapper">
+              <md-icon md-font-icon ng-class="vm.userStatus.icon"
+                class="icon icon-tile-four">
+              </md-icon>
+            </div>
+
+            <span class="" hide show-gt-sm>Portal</span>
+
+            <md-icon md-font-icon="icon-chevron-down"
+              class="icon s16" hide-xs></md-icon>
+          </div>
+
+        </md-button>
+
+        <md-menu-content width="4" class='p-0'>
+
+          <md-menu-item class="md-indent" 
+            ng-click='main.choosePortal(portal)'
+            ng-repeat='portal in main.portals'>
+            <md-button >{{portal.title}}</md-button>
+          </md-menu-item>
+
+          <md-menu-item class="md-indent"  ng-click='vm.openModalPortal()'>
+            <md-button >Create Portal</md-button>
+          </md-menu-item>
+
+        </md-menu-content>
+      </md-menu>
+    </md-menu-bar>
+
+    <md-menu-bar id="property-menu">
+      <md-menu md-position-mode="left bottom">
+        <md-button class="toolbar-button" ng-click="$mdOpenMenu()"
+          aria-label="User settings"
+          translate translate-attr-aria-label="TOOLBAR.USER_SETTINGS">
+
+          <div layout="row" layout-align="space-between center">
+            <div class="avatar-wrapper">
+              <md-icon md-font-icon ng-class="vm.userStatus.icon"
+                class="icon icon-cube">
+              </md-icon>
+            </div>
+            <span class="" hide show-gt-sm>Property</span>
+            <md-icon md-font-icon="icon-chevron-down"
+              class="icon s16" hide-xs></md-icon>
+          </div>
+
+        </md-button>
+
+        <md-menu-content width="4" class='p-0'>
+
+          <md-menu-item class="md-indent"
+            ng-click='main.chooseProperty(property)'
+            ng-repeat='property in main.properties'>
+            <md-button>{{property.title}}</md-button>
+          </md-menu-item>
+
+          <md-menu-item class="md-indent"  ng-click='vm.openModalProperty()'>
+            <md-button >Create Property</md-button>
+          </md-menu-item>
+
+        </md-menu-content>
+      </md-menu>
+    </md-menu-bar>
+
+    <md-menu-bar id="user-menu">
+      <md-menu md-position-mode="left bottom">
+        <md-button class="toolbar-button" ng-click="$mdOpenMenu()"
+          aria-label="User settings"
+          translate translate-attr-aria-label="TOOLBAR.USER_SETTINGS">
+
+          <div layout="row" layout-align="space-between center">
+            <div class="avatar-wrapper">
+                <img md-menu-align-target class="avatar" src="assets/images/avatars/profile.jpg">
+                <md-icon md-font-icon ng-class="vm.userStatus.icon"
+                  ng-style="{'color': vm.userStatus.color }"
+                  class="icon status s16">
+                </md-icon>
+            </div>
+            <span class="username" hide show-gt-sm>John Doe</span>
+            <md-icon md-font-icon="icon-chevron-down"
+              class="icon s16" hide-xs></md-icon>
+          </div>
+
+        </md-button>
+
+        <md-menu-content width="3" class='p-0'>
+            <md-menu-item class="md-indent" ng-click='vm.updateProfileModal()'>
+              <md-button class='border-bottom'>Update profile</md-button>
+            </md-menu-item>
+
+            <md-menu-item class="md-indent">
+              <md-button ng-click="vm.logout()">Logout</md-button>
+            </md-menu-item>
+        </md-menu-content>
+      </md-menu>
+    </md-menu-bar>
+  </div>
+</div>

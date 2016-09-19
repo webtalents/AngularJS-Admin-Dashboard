@@ -1,0 +1,108 @@
+<md-dialog class="create-document-dialog" aria-label="New Message">
+  <div class="md-inline-form" style="width: 400px;">
+    <md-toolbar class="md-accent md-hue-2">
+        <div class="md-toolbar-tools" layout="row" layout-align="space-between center">
+            <span class="title" >New Document</span>
+            <md-button class="md-icon-button" ng-click="vm.hide()" aria-label="Close dialog">
+                <md-icon md-font-icon="icon-close"></md-icon>
+            </md-button>
+        </div>
+    </md-toolbar>
+    <div layout class='document-type' ng-init='type = "document"'>
+      <div flex='50'
+        ng-click='type = "document"'
+        ng-class='{active: type == "document"}'
+        class='text-center'>
+          Document
+      </div>
+      <div 
+        ng-click='type = "category"'
+        ng-class='{active: type == "category"}'
+        flex='' class='text-center '>
+          Document Category
+      </div>
+    </div>
+    <md-dialog-content ms-scroll ng-show='type === "document"'>
+      <form class="md-inline-form" ng-submit='vm.createFile()'>
+        
+        <md-input-container class="md-block">
+            <label >Name (required)</label>
+            <input ng-model="vm.document.name" type="text" required="">
+        </md-input-container>
+        
+        <div layout>
+          <input type="file" id='file' ng-hide='true'
+            onchange='angular.element(this).scope().setFile("file", this)'>
+          <md-input-container class="md-block" flex='70'>
+            <label >Select file</label>
+            <input ng-model="vm.file.file" type="text" required="">
+          </md-input-container>
+
+          <div flex>
+            <md-button class='md-accent'>
+              <label for="file" style="display: block">Browse</label>
+            </md-button>
+          </div>
+        </div>
+
+        <div layout>
+          <md-select flex placeholder="Select Category" 
+            ng-model="vm.document.category">
+
+            <md-option ng-value="category._id" ng-repeat="category in vm.categories">
+              {{category.name}}
+            </md-option>
+
+          </md-select>
+        </div>    
+
+        <div layout="row" layout-align="space-between center">
+            <md-button type='submit'
+              class="send-button md-accent md-raised" 
+              aria-label="Send">
+              ADD DOCUMENT
+            </md-button>
+
+            <md-button class="md-icon-button" aria-label="Delete">
+              <md-icon md-font-icon="icon-delete"></md-icon>
+            </md-button>
+        </div>
+
+      </form>
+    </md-dialog-content>
+
+    <md-dialog-content ms-scroll ng-show='type === "category"'>
+      <form class="md-inline-form" ng-submit='vm.createCategory()'>
+      
+        <md-input-container class="md-block">
+            <label >Name (required)</label>
+            <input ng-model="vm.category.name" type="text" required="">
+        </md-input-container>
+
+        <div layout>
+          <md-select flex placeholder="Select Parent Category" 
+            ng-model="vm.category.parent_category">
+
+            <md-option ng-value="category._id" ng-repeat="category in vm.categories">
+              {{category.name}}
+            </md-option>
+          </md-select>
+        </div>    
+
+        <div layout="row" layout-align="space-between center">
+          <md-button aria-label="Send" type='submit'
+            class="send-button md-accent md-raised" >
+            ADD DOCUMENT CATEGORY
+          </md-button>
+
+          <md-button class="md-icon-button" aria-label="Delete">
+            <md-icon md-font-icon="icon-delete"></md-icon>
+          </md-button>
+        </div>
+
+      </form>
+
+    </md-dialog-content>
+
+  </div>
+</md-dialog>

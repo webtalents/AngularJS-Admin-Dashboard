@@ -1,0 +1,86 @@
+<md-dialog class="create-portal-dialog" aria-label="New Message">
+    <form class="md-inline-form" ng-submit='vm.create()'>
+        <md-toolbar class="md-accent md-hue-2">
+            <div class="md-toolbar-tools" layout="row" layout-align="space-between center">
+                <span class="title" >New Portal</span>
+                <md-button class="md-icon-button" ng-click="vm.hide()" aria-label="Close dialog">
+                    <md-icon md-font-icon="icon-close"></md-icon>
+                </md-button>
+            </div>
+        </md-toolbar>
+
+        <md-dialog-content ms-scroll>
+
+          <md-input-container class="md-block">
+              <label >Name (required)</label>
+              <input ng-model="vm.form.name" required="" type="text">
+          </md-input-container>
+          
+          <div layout>
+            <input ng-model="vm.logo_img" type="file" 
+              onchange='angular.element(this).scope().setFile("logo_img", this)'
+              id='file' ng-hide='true'>
+            <md-input-container class="md-block" flex='70'>
+              <label >Logo</label>
+              <input ng-model="vm.file.logo" type="text"  >
+
+            </md-input-container>
+
+            <div flex>
+              <md-button class='md-accent'>
+                <label for="file" style="display: block">Browse</label>
+              </md-button>
+            </div>
+          </div>
+
+          <div layout>
+            <md-input-container class="md-block" flex='70' >
+              <label >Color</label>
+              <input ng-model="vm.color.bgColorValue" type="text">
+            </md-input-container>
+            <div flex>
+              <ms-material-color-picker ms-model-type="obj" ng-model="vm.color">
+                <md-button ng-style="{'background' : $parent.vm.color.bgColorValue}">
+                Color 
+                </md-button>
+              </ms-material-color-picker>
+
+            </div>
+          </div>
+
+          <div layout>
+            <input type="file" 
+              onchange='angular.element(this).scope().setFile("background_img", this)'
+              id='file2' ng-hide='true'>
+
+            <md-input-container class="md-block" flex='70'>
+              <label >Background</label>
+              <input ng-model="vm.file.background_img" type="text"  >
+            </md-input-container>
+
+            <div flex>
+              <md-button class='md-accent'>
+                <label for="file2" style="display: block">Browse</label>
+              </md-button>
+            </div>
+          </div>
+          
+        </md-dialog-content>
+
+        <md-dialog-actions layout="row" layout-align="space-between center">
+            <div layout="row" layout-align="start center">
+                <md-button type='submit' class="send-button md-accent md-raised" aria-label="Send">
+                  ADD PROPERTY
+                </md-button>
+
+                <md-progress-circular ng-show='vm.upload'></md-progress-circular>
+            </div>
+
+            <div layout="row">
+                <md-button class="md-icon-button" aria-label="Delete" ng-click='vm.clean()'>
+                    <md-icon md-font-icon="icon-delete"></md-icon>
+                </md-button>
+            </div>
+        </md-dialog-actions>
+    </form>
+</md-dialog>

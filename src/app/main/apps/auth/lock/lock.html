@@ -1,0 +1,50 @@
+<div id="lock" class="flex-scrollable" layout="column" ms-scroll>
+    <div id="lock-form-wrapper" layout="column" layout-align="center center">
+        <div id="lock-form" class="md-whiteframe-8dp">
+            <div layout="row" layout-align="start center" layout-sm="column" layout-align-sm="center center">
+                <div class="avatar-container">
+                    <img class="avatar big" src="assets/images/avatars/katherine.jpg">
+                    <md-icon md-font-icon="icon-lock" class="md-warn-fg s36 md-hue-2"></md-icon>
+                </div>
+
+                <div flex layout="column" layout-align="start" layout-align-sm="center center">
+                    <div class="title" translate="LOCK.TITLE">Your session is locked</div>
+                    <div class="subtitle" translate="LOCK.SUBTITLE">
+                        Due to inactivity, your session is locked. Enter your password to continue.
+                    </div>
+                </div>
+            </div>
+
+            <form name="lockForm" novalidate>
+                <md-input-container class="md-block" md-no-float>
+                    <input ng-model="vm.form.username" placeholder="Username"
+                           translate translate-attr-placeholder="LOCK.USERNAME"
+                           disabled>
+                </md-input-container>
+
+                <md-input-container class="md-block" md-no-float>
+                    <input type="password" name="password" ng-model="vm.form.password" placeholder="Password"
+                           translate translate-attr-placeholder="LOCK.PASSWORD"
+                           required>
+                    <div ng-messages="lockForm.password.$error" role="alert">
+                        <div ng-message="required">
+                            <span translate="LOCK.ERRORS.PASSWORD_REQUIRED">Password field is required</span>
+                        </div>
+                    </div>
+                </md-input-container>
+
+                <md-button type="submit" class="md-raised md-accent submit-button" aria-label="UNLOCK"
+                           ng-disabled="lockForm.$invalid || lockForm.$pristine"
+                           translate="LOCK.UNLOCK" translate-attr-aria-label="LOCK.UNLOCK">
+                    UNLOCK
+                </md-button>
+            </form>
+
+            <div class="message">
+                <a ui-sref="app.pages_auth_login" class="md-accent-color">
+                    <span translate="LOCK.ARE_YOU_NOT">Are you not</span><span> Jane Doe?</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

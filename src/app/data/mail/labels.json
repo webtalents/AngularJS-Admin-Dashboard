@@ -1,0 +1,28 @@
+{
+    "data": [
+        {
+            "id": 1,
+            "name": "notes",
+            "title": "Notes",
+            "color": "md-green-600-bg"
+        },
+        {
+            "id": 2,
+            "name": "paypal",
+            "title": "Paypal",
+            "color": "md-orange-800-bg"
+        },
+        {
+            "id": 3,
+            "name": "invoices",
+            "title": "Invoices",
+            "color": "md-blue-grey-500-bg"
+        },
+        {
+            "id": 4,
+            "name": "amazon",
+            "title": "Amazon",
+            "color": "md-blue-500-bg"
+        }
+    ]
+}

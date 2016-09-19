@@ -1,0 +1,184 @@
+#reports {
+
+	.icon-chevron-right {
+		color: rgba(0, 0, 0, 0.68) !important
+	}
+
+	.center {
+
+		.header {
+			position: relative;
+
+			.header-content {
+				height: 100%;
+
+				.breadcrumb {
+					font-size: 24px;
+					padding-left: 90px;
+
+					span {
+						cursor: pointer;
+
+						md-icon {
+							cursor: default;
+						}
+
+						&:last-child {
+
+							md-icon {
+								display: none;
+							}
+						}
+					}
+
+					.separator {
+						margin-left: 8px;
+						margin-right: 8px;
+					}
+				}
+			}
+
+			.add-file-button {
+				position: absolute;
+				bottom: -32px;
+				left: 16px;
+			}
+		}
+
+		.content {
+			padding: 0;
+			background: #FFFFFF;
+		}
+	}
+
+	.file-icon {
+
+		.icon-folder {
+
+			&:before {
+				color: #FFB300;
+			}
+		}
+
+		.icon-document {
+
+			&:before {
+				color: #27AE60;
+			}
+		}
+
+		.icon-spreadsheet {
+
+			&:before {
+				color: #4CAF50;
+			}
+		}
+
+		.icon-file-pdf {
+
+			&:before {
+				color: #f41d25;
+			}
+		}
+	}
+}
+
+.report-info-dialog {
+	width: 1300px;
+	max-width: 95%;
+	overflow: hidden;
+
+	md-dialog-content {
+		padding: 30px 60px !important;
+	}
+
+	.edit-button {
+		position: absolute;
+    left: -40px;
+    top: 38px;
+	}
+
+	.fields-group {
+		md-input-container {
+			margin: 0 !important
+		}
+
+		.md-errors-spacer {
+			min-height: 10px;
+		}
+
+		> div > span {
+			position: relative;
+	    width: 0px;
+	  	left: -23px;
+	  	top: 15px;
+		}
+
+		> div:last-child > span {
+			left: -30px;
+		}
+
+		.fields-group-headers {
+			> div {
+				position: relative;
+				height: 70px;
+
+				span {
+					position: absolute;
+					bottom: 0;
+				}
+			}
+
+
+		}
+	}
+}
+
+.create-document-dialog .add-properties md-input-container {
+	width: 100%;
+	margin-bottom: 0
+}
+
+.select-required {
+	width: 0px;
+	opacity: 0;
+}
+
+// RESPONSIVE
+@media screen and (max-width: $layout-breakpoint-md) {
+
+	#reports {
+
+		.center {
+
+			.header {
+
+				.header-content {
+
+					.breadcrumb {
+						font-size: 18px;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: $layout-breakpoint-sm) {
+
+	#reports {
+
+		.center {
+
+			.header {
+
+				.header-content {
+
+					.breadcrumb {
+						font-size: 16px;
+					}
+				}
+			}
+		}
+	}
+}

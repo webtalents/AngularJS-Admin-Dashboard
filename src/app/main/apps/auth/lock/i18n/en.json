@@ -1,0 +1,13 @@
+{
+    "LOCK": {
+        "TITLE": "Your session is locked",
+        "SUBTITLE": "Due to inactivity, your session is locked. Enter your password to continue.",
+        "USERNAME": "User Name",
+        "PASSWORD": "Password",
+        "UNLOCK": "UNLOCK",
+        "ARE_YOU_NOT": "Are you not ",
+        "ERRORS": {
+            "PASSWORD_REQUIRED": "Password field is required"
+        }
+    }
+}

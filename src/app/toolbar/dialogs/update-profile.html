@@ -1,0 +1,131 @@
+<md-dialog class="create-user-dialog" aria-label="New Message">
+  <form class="md-inline-form " >
+    <md-toolbar class="md-accent md-hue-2">
+        <div class="md-toolbar-tools" layout="row" layout-align="space-between center">
+            <span class="title" >Update Profile</span>
+            <md-button class="md-icon-button" ng-click="vm.hide()" aria-label="Close dialog">
+                <md-icon md-font-icon="icon-close"></md-icon>
+            </md-button>
+        </div>
+    </md-toolbar>
+
+    <md-dialog-content ms-scroll>  
+      <div layout>
+        <div flex='50'>
+
+          <md-input-container class="md-icon-float md-block">
+
+            <label>Name (required)</label>
+            <md-icon md-font-icon="icon-account"></md-icon>
+            <input ng-model="vm.firstname" type="text" required>
+
+          </md-input-container>
+
+        </div>
+
+        <div flex='50'>
+
+          <md-input-container class="md-icon-float md-block">
+
+            <label>Last name</label>
+            <md-icon md-font-icon="icon-user"></md-icon>
+            <input ng-model="vm.lastname" type="text">
+
+          </md-input-container>
+
+        </div>
+      </div>
+
+      <div layout>
+        <div flex='50'>
+
+          <md-input-container class="md-icon-float md-block">
+
+            <label>Email</label>
+            <md-icon md-font-icon="icon-email"></md-icon>
+            <input ng-model="vm.email" type="email" >
+
+          </md-input-container>
+
+        </div>
+
+        <div flex='50'>
+
+          <md-input-container class="md-icon-float md-block">
+
+            <label>Phone number</label>
+            <md-icon md-font-icon="icon-phone"></md-icon>
+            <input ng-model="vm.phonenumber" type="text">
+
+          </md-input-container>
+
+        </div>
+      </div>
+
+      <div layout>
+        <div flex='50'>
+
+          <md-input-container class="md-icon-float md-block">
+
+            <label>Company</label>
+            <md-icon md-font-icon="icon-domain"></md-icon>
+            <input ng-model="vm.company" type="text" required>
+
+          </md-input-container>
+
+        </div>
+
+        <div flex='50'>
+
+          <md-input-container class="md-icon-float md-block">
+
+            <label>Job title</label>
+            <md-icon md-font-icon="icon-school"></md-icon>
+            <input ng-model="vm.jobtitle" type="text">
+
+          </md-input-container>
+
+        </div>
+      </div>
+
+      <p class='mt-0 font-weight-300'>Change Password (leave blank to leave unchanged)</p>
+
+      <div layout>
+
+        <div flex='50' class='ph-8'>
+
+          <md-input-container class="md-icon-float md-block">
+
+            <label>Current Password *</label>
+            <input ng-model="vm.currentpassword" type="password">
+
+          </md-input-container>
+
+        </div>
+
+        <div flex='50' class='ph-8'>
+
+          <md-input-container class="md-icon-float md-block">
+
+            <label>New Password *</label>
+            <input ng-model="vm.newpassword" type="password">
+
+          </md-input-container>
+
+        </div>
+      </div>
+
+    </md-dialog-content>
+
+    <md-dialog-actions layout="row" layout-align="space-between center">
+        <div layout="row" layout-align="start center">
+            <md-button ng-click="vm.updateProfile()" 
+              class="send-button md-accent md-raised" aria-label="Send" >
+                UPDATE
+            </md-button>
+
+        </div>
+    </md-dialog-actions>
+
+  </form>
+</md-dialog>

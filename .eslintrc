@@ -1,0 +1,24 @@
+{
+    "extends": "eslint:recommended",
+    "plugins": [
+        "angular"
+    ],
+    "rules": {
+        "angular/controller-as": 0,
+        "angular/controller-as-vm": 0
+    },
+    "env": {
+        "browser": true,
+        "jasmine": true
+    },
+    "globals": {
+        "angular": true,
+        "module": true,
+        "inject": true,
+        "PerfectScrollbar": true,
+        "MobileDetect": true,
+        "hljs": true,
+        "d3": true,
+        "moment": true
+    }
+}

@@ -1,0 +1,78 @@
+{
+  "name": "fuse",
+  "version": "1.4.0",
+  "dependencies": {
+    "angular": "1.5.5",
+    "angular-animate": "1.5.5",
+    "angular-aria": "1.5.5",
+    "angular-chart.js": "0.10.2",
+    "angular-chartist.js": "3.3.13",
+    "angular-cookies": "1.5.5",
+    "angular-datatables": "0.5.4",
+    "angular-native-dragdrop": "1.1.2",
+    "jsPlumb": "2.0.5",
+    "angular-gantt": "1.2.13",
+    "angular-google-maps": "2.3.2",
+    "angular-material": "1.0.9",
+    "angular-messages": "1.5.5",
+    "angular-nvd3": "1.0.7",
+    "angular-resource": "1.5.5",
+    "angular-sanitize": "1.5.5",
+    "angular-timer": "1.3.4",
+    "angular-translate": "2.11.0",
+    "angular-translate-loader-partial": "2.11.0",
+    "angular-ui-calendar": "1.0.1",
+    "angular-ui-router": "0.3.0",
+    "angular-ui-sortable": "0.14.0",
+    "angular-ui-tree": "2.15.0",
+    "angular-xeditable": "0.1.12",
+    "c3-angular": "1.2.0",
+    "css-element-queries": "0.3.2",
+    "d3": "3.5.17",
+    "datatables-responsive": "2.1.0",
+    "highlightjs": "8.9.1",
+    "imagesloaded": "4.1.0",
+    "jquery": "2.2.4",
+    "jqueryui-touch-punch": "*",
+    "mobile-detect": "1.3.2",
+    "moment": "2.13.0",
+    "moment-picker": "0.4.2",
+    "moment-range": "2.2.0",
+    "nvd3": "1.8.1",
+    "ng-flow": "2.7.1",
+    "perfect-scrollbar": "0.6.11",
+    "Sortable": "1.4.2",
+    "textAngular": "1.5.1",
+    "ngSweetAlert": "^1.1.0"
+  },
+  "devDependencies": {
+    "angular-mocks": "1.5.5"
+  },
+  "resolutions": {
+    "angular": "1.5.5",
+    "d3": "3.5.14",
+    "moment": "2.13.0"
+  },
+  "overrides": {
+    "angular-material": {
+      "main": [
+        "angular-material.js"
+      ]
+    },
+    "perfect-scrollbar": {
+      "main": [
+        "css/perfect-scrollbar.css",
+        "js/perfect-scrollbar.js"
+      ]
+    },
+    "Sortable": {
+      "main": [
+        "Sortable.js",
+        "ng-sortable.js"
+      ]
+    },
+    "font-awesome": {
+      "main": []
+    }
+  }
+}

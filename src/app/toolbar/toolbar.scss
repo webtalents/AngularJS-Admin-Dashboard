@@ -1,0 +1,162 @@
+#toolbar {
+	height: $toolbarHeight;
+	min-height: $toolbarHeight;
+	max-height: $toolbarHeight;
+	z-index: 55 !important;
+
+	#navigation-toggle {
+		width: $toolbarHeight;
+		min-width: $toolbarHeight;
+		height: $toolbarHeight;
+		margin: 0;
+		border-right: 1px solid rgba(0, 0, 0, 0.12);
+		border-radius: 0;
+	}
+
+	#user-menu, #property-menu, #portal-menu  {
+		height: $toolbarHeight;
+		padding: 0;
+
+		md-menu-item .md-button {
+			font-size: 15px;
+
+			md-icon {
+				margin: auto 16px auto 0;
+			}
+		}
+
+		md-menu-content {
+
+			&.md-menu-bar-menu {
+
+				&.md-dense {
+					padding: 8px 0;
+
+					.md-button,
+					md-menu-item {
+						height: 48px;
+						line-height: 48px;
+					}
+				}
+			}
+		}
+
+		.toolbar-button {
+			margin: 0;
+			padding: 0 16px;
+			height: $toolbarHeight;
+			text-transform: none;
+
+			.avatar-wrapper {
+				position: relative;
+
+				.status {
+					position: absolute;
+					bottom: -3px;
+					right: 5px;
+				}
+			}
+
+			.username {
+				margin: 0 12px 0 20px;
+			}
+		}
+	}
+
+	#user-menu {
+		left: -20px;
+	}
+
+	#property-menu {
+	  left: -30%;
+
+		.toolbar-button {
+			padding: 0 27px
+		}
+		
+		.icon-chevron-down {
+			left: 10px;
+			position: relative
+		}
+
+	  md-icon {
+			position: relative;
+    	left: -15px;
+	  }
+	}
+
+	#portal-menu {
+	  left: -40%;
+
+		.toolbar-button {
+			padding: 0 27px
+		}
+
+		.icon-chevron-down {
+			left: 10px;
+			position: relative
+		}
+
+	  md-icon {
+			position: relative;
+    	left: -15px;
+	  }
+	}
+
+	.toolbar-separator {
+		height: $toolbarHeight;
+		width: 1px;
+		background: rgba(0, 0, 0, 0.12);
+	}
+}
+
+#language-menu-content {
+
+	md-menu-item {
+
+		.flag {
+			margin-right: 16px;
+		}
+	}
+}
+
+#language-message {
+	min-height: 88px;
+	max-width: 600px;
+
+	.md-toast-content {
+		height: 90px;
+	}
+}
+
+.md-open-menu-container md-menu-content {
+	md-menu-item {
+		height: 50px;
+
+		.md-button {
+			padding: 0 10px 0 25px !important;
+	    margin: 0;
+	    height: 50px !important;
+
+	    &.border-bottom {
+				border-bottom: 1px solid rgba(195, 192, 192, 0.35);
+	    }
+	    
+		}
+	}
+}
+
+// RESPONSIVE
+@media screen and (max-width: $layout-breakpoint-xs) {
+
+	#toolbar {
+
+		#user-menu {
+
+			.user-button {
+				min-width: 64px;
+				padding: 0 2px 0 10px;
+			}
+		}
+	}
+}

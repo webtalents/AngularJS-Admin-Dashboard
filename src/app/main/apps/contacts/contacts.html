@@ -1,0 +1,53 @@
+<div id="contacts" class="page-layout simple right-sidenav" layout="row">
+
+	<!-- CENTER -->
+	<div class="center" layout="column" flex>
+
+		<!-- HEADER -->
+		<div class="header md-accent-bg">
+
+			<div class="header-content" layout="column" layout-align="space-between">
+
+				<!-- TOOLBAR -->
+				<div class="toolbar" layout="row" layout-align="space-between">
+				</div>
+				<!-- / TOOLBAR -->
+
+				<!-- BREADCRUMB -->
+				<div class="breadcrumb " layout="row" layout-align="space-between center">
+					<div>
+						Contacts
+					</div>
+					
+					<md-button class="md-icon-button" aria-label="Settings" 
+						ng-click="vm.fileModal($event)">
+            <md-icon md-font-icon="icon-cog"></md-icon>
+            <md-tooltip><span>Settings</span></md-tooltip>
+        	</md-button>
+				</div>
+				<!-- / BREADCRUMB -->
+			</div>
+
+			<!-- ADD FILE BUTTON -->
+			<div >
+
+				<md-button flow-btn class="add-file-button md-fab md-warn"
+						   ng-click="vm.contactEditModel()" aria-label="Add file">
+					<md-icon md-font-icon="icon-pencil"></md-icon>
+				</md-button>
+			</div>
+			<!-- / ADD FILE BUTTON -->
+		</div>
+		<!-- / HEADER -->
+
+		<!-- CONTENT -->
+		<md-content class="content layout-align-start-start layout-row"flex ms-scroll>
+			<div ng-bind-html='vm.content'>
+			</div>
+		</md-content>
+		<!-- / CONTENT -->
+
+	</div>
+	<!-- / CENTER -->
+
+</div>

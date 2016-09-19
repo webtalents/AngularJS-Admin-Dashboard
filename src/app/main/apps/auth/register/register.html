@@ -1,0 +1,81 @@
+<div id="register" class="flex-scrollable" layout="column" ms-scroll>
+    <div id="register-form-wrapper" layout="column" layout-align="center center">
+        <div id="register-form" class="md-whiteframe-8dp">
+            <div class="logo md-accent-bg">
+                <span>F</span>
+            </div>
+
+            <div class="title" translate="REGISTER.TITLE">Create an account</div>
+
+            <form name="registerForm" novalidate>
+                <md-input-container class="md-block" md-no-float>
+                    <input name="username" ng-model="vm.form.username" placeholder="Name"
+                           translate translate-attr-placeholder="REGISTER.NAME"
+                           required>
+                    <div ng-messages="registerForm.username.$error" role="alert">
+                        <div ng-message="required">
+                            <span translate="REGISTER.ERRORS.USERNAME_REQUIRED">Username field is required</span>
+                        </div>
+                    </div>
+                </md-input-container>
+
+                <md-input-container class="md-block" md-no-float>
+                    <input type="email" name="email" ng-model="vm.form.email" placeholder="Email"
+                           translate translate-attr-placeholder="REGISTER.EMAIL"
+                           ng-pattern="/^.+@.+\..+$/" required>
+                    <div ng-messages="registerForm.email.$error" role="alert" multiple>
+                        <div ng-message="required">
+                            <span translate="REGISTER.ERRORS.EMAIL_REQUIRED">Email field is required</span>
+                        </div>
+                        <div ng-message="pattern">
+                            <span translate="REGISTER.ERRORS.EMAIL_MUST_VALID">Email must be a valid e-mail address</span>
+                        </div>
+                    </div>
+                </md-input-container>
+
+                <md-input-container class="md-block" md-no-float>
+                    <input type="password" name="password" ng-model="vm.form.password" placeholder="Password"
+                           translate translate-attr-placeholder="REGISTER.PASSWORD"
+                           required>
+                    <div ng-messages="registerForm.password.$error" role="alert">
+                        <div ng-message="required">
+                            <span translate="REGISTER.ERRORS.PASSWORD_REQUIRED">Password field is required</span>
+                        </div>
+                    </div>
+                </md-input-container>
+
+                <md-input-container class="md-block" md-no-float>
+                    <input type="password" name="passwordConfirm" ng-model="vm.form.passwordConfirm"
+                           placeholder="Password (Confirm)"
+                           translate translate-attr-placeholder="REGISTER.PASSWORD_CONFIRM"
+                           required>
+                    <div ng-messages="registerForm.passwordConfirm.$error" role="alert">
+                        <div ng-message="required">
+                            <span translate="REGISTER.ERRORS.PASSWORD_CONFIRM_REQUIRED">Password (Confirm) field is required</span>
+                        </div>
+                    </div>
+                </md-input-container>
+
+                <div class="terms" layout="row" layout-align="center center">
+                    <md-checkbox name="terms" ng-model="data.cb1" aria-label="I read and accept" required></md-checkbox>
+                    <div layout="row" layout-sm="column" layout-align="start center">
+                        <span translate="REGISTER.READ_ACCEPT">I read and accept</span>
+                        <a href="#" class="md-accent-color" translate="REGISTER.TERMS_COND">terms and conditions</a>
+                    </div>
+                </div>
+
+                <md-button type="submit" class="md-raised md-accent submit-button" aria-label="CREATE MY ACCOUNT"
+                           ng-disabled="registerForm.$invalid || registerForm.$pristine"
+                           translate="REGISTER.CREATE_ACCOUNT"
+                           translate-attr-aria-label="REGISTER.CREATE_ACCOUNT">
+                    CREATE MY ACCOUNT
+                </md-button>
+            </form>
+
+            <div class="login" layout="row" layout-xs="column" layout-align="center center">
+                <span class="text" translate="REGISTER.ALREADY_HAVE">Already have an account?</span>
+                <a class="link" ui-sref="app.pages_auth_login" translate="REGISTER.LOGIN">Log in</a>
+            </div>
+        </div>
+    </div>
+</div>

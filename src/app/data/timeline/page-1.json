@@ -1,0 +1,94 @@
+{
+    "data": [
+        {
+            "card": {
+                "template": "app/core/directives/ms-card/templates/template-1/template-1.html",
+                        "media": {
+                            "image": {
+                        "src": "assets/images/etc/early-sunrise.jpg",
+                        "alt": "Early Sunrise"
+                    }
+                },
+                "title": "Nature",
+                "subtitle": "Mountain view from lake side",
+                "text": "Look deep into nature, then you will understand everything better."
+            },
+            "icon": "icon-document",
+            "time": "July 22, 2015, 12:33AM",
+            "event": "You posted a blog"
+        },
+        {
+            "card": {
+                "template": "app/core/directives/ms-card/templates/template-5/template-5.html",
+                "title": "Friends",
+                "event": "Gordon Freeman is now following you",
+                "media": {
+                    "image": {
+                        "src": "assets/images/avatars/garry.jpg",
+                        "alt": "Andrew Ryan"
+                    }
+                }
+            },
+            "icon": "icon-account-plus",
+            "time": "July 22, 2015, 12:33AM",
+            "event": "You have a new follower"
+        },
+        {
+            "card": {
+                "template": "app/core/directives/ms-card/templates/template-2/template-2.html",
+                "avatar": {
+                    "src": "assets/images/avatars/alice.jpg",
+                    "alt": "Alice Freeman"
+                },
+                "title": "Alice Freeman posted on Nature",
+                "subtitle": "32 minutes ago",
+                "media": {
+                    "image": {
+                        "src": "assets/images/etc/early-sunrise.jpg",
+                        "alt": "Early Sunrise"
+                    }
+                },
+                "text": "Look deep into nature, then you will understand everything better. Look deep into nature, then you will understand everything better."
+            },
+            "icon": "icon-document",
+            "time": "July 22, 2015, 12:33AM",
+            "event": "Alice Freeman shared an article with public"
+        },
+        {
+            "card": {
+                "template": "app/core/directives/ms-card/templates/template-8/template-8.html",
+                "title": "Nature",
+                "subtitle": "Mountain view from lake side",
+                "button1": "DETAILS",
+                "button2": "SHARE",
+                "text": "Look deep into nature, then you will understand everything better. Look deep into nature, then you will understand everything better. Duis leo enim, interdum vitae commodo quis, ullamcorper eget lectus. Phasellus auctor tellus id sem dictum gravida. Quisque vitae enim quis libero ultricies dictum sit amet vitae metus. Mauris efficitur nisi eu metus eleifend, sit amet molestie eros viverra.",
+                "media": {
+                    "image": {
+                        "src": "assets/images/etc/early-sunrise.jpg",
+                        "alt": "Early Sunrise"
+                    }
+                }
+            },
+            "icon": "icon-document",
+            "time": "July 22, 2015, 12:33AM",
+            "event": "Alice Freeman shared an article with public"
+        },
+        {
+            "card": {
+                "template": "app/core/directives/ms-card/templates/template-10/template-10.html",
+                "title": "Health",
+                "subtitle": "Stimpaks are good for you",
+                "media": {
+                    "image": {
+                        "src": "assets/images/logos/fallout.png",
+                        "alt": "Andrew Ryan"
+                    }
+                },
+                "text": "Cras lobortis justo vel risus pulvinar, a fermentum eros luctus. Aliquam quis tortor ornare metus bibendum consectetur. Mauris tincidunt libero eros, et tempus justo tristique nec. Proin mollis sagittis ligula ac sollicitudin. Ut imperdiet purus varius, tristique nisi eu, sagittis mauris."
+            },
+            "icon": "icon-document",
+            "time": "July 22, 2015, 12:33AM",
+            "event": "Alice Freeman shared an article with public"
+        }
+    ]
+}

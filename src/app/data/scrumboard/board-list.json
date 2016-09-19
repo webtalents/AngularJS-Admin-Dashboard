@@ -1,0 +1,14 @@
+{
+    "data": [
+        {
+            "name": "ACME Frontend Application",
+            "uri": "acme-frontend-application",
+            "id": "32gfhaf2"
+        },
+        {
+            "name": "ACME Backend Application",
+            "uri": "acme-backend-application",
+            "id": "27cfcbe1"
+        }
+    ]
+}

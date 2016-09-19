@@ -1,0 +1,81 @@
+<!-- SIDENAV HEADER -->
+<!-- <div class="header md-accent-bg" layout="column" layout-align="space-between" 
+    style='background-color: {{main.interface.color}}; background-image: url({{main.interface.background_img_path}})'> -->
+<div class="header md-accent-bg" layout="column" layout-align="space-between" 
+    background-image: url({{main.interface.background_img_path}})'>
+    <div class="toolbar" layout="row" layout-align="end center">
+        <md-button class="md-icon-button" aria-label="More" 
+            ng-click="vm.fileModal($event)" >
+            <md-icon md-font-icon="icon-dots-vertical"></md-icon>
+            <md-tooltip><span translate="FM.MORE">More</span></md-tooltip>
+        </md-button>
+
+        <md-button class="md-icon-button" ng-click="vm.delete()" aria-label="Delete" translate
+                   translate-attr-aria-label="FM.DELETE">
+            <md-icon md-font-icon="icon-delete"></md-icon>
+            <md-tooltip><span translate="FM.DELETE">Delete</span></md-tooltip>
+        </md-button>
+
+        <md-button class="md-icon-button" aria-label="Download" translate translate-attr-aria-label="FM.DOWNLOAD">
+            <md-icon md-font-icon="icon-download"></md-icon>
+            <md-tooltip><span translate="FM.DOWNLOAD">Download</span></md-tooltip>
+        </md-button>
+    </div>
+
+    <div>
+        <div class="title">{{vm.selected.name}}</div>
+        <div class="subtitle secondary-text"><span translate="FM.EDITED">Edited</span>: {{vm.selected.modified}}</div>
+    </div>
+</div>
+<!-- / SIDENAV HEADER -->
+
+<!-- SIDENAV CONTENT -->
+<md-content class="content" flex ms-scroll>
+
+    <div class="file-details">
+        <div class="preview file-icon" layout="row" layout-align="center center">
+            <i class="{{vm.selected.icon}} s48"></i>
+        </div>
+
+        <div class="title" translate="FM.INFO">Info</div>
+
+        <table>
+            <tr class="type">
+                <th translate="FM.TYPE">Type</th>
+                <td>{{vm.selected.type}}</td>
+            </tr>
+
+            <tr class="size">
+                <th translate="FM.SIZE">Size</th>
+                <td>{{vm.selected.size === '' ? '-': vm.selected.size}}</td>
+            </tr>
+
+            <tr class="location">
+                <th translate="FM.LOCATION">Location</th>
+                <td>{{vm.selected.location}}</td>
+            </tr>
+
+            <tr class="owner">
+                <th translate="FM.OWNER">Owner</th>
+                <td>{{vm.selected.owner}}</td>
+            </tr>
+
+            <tr class="modified">
+                <th translate="FM.MODIFIED">Modified</th>
+                <td>{{vm.selected.modified}}</td>
+            </tr>
+
+            <tr class="opened">
+                <th translate="FM.OPENED">Opened</th>
+                <td>{{vm.selected.opened}}</td>
+            </tr>
+
+            <tr class="created">
+                <th translate="FM.CREATED">Created</th>
+                <td>{{vm.selected.created}}</td>
+            </tr>
+        </table>
+    </div>
+
+</md-content>
+<!-- / SIDENAV CONTENT -->

@@ -1,0 +1,54 @@
+<md-dialog class="create-document-dialog" aria-label="New Message">
+    <div class="md-inline-form" style="width: 400px;">
+        <md-toolbar class="md-accent md-hue-2">
+            <div class="md-toolbar-tools" layout="row" layout-align="space-between center">
+                <span class="title" >Update Report</span>
+                <md-button class="md-icon-button" ng-click="vm.hide()" aria-label="Close dialog">
+                    <md-icon md-font-icon="icon-close"></md-icon>
+                </md-button>
+            </div>
+        </md-toolbar>
+
+        <md-dialog-content ms-scroll>
+
+          <form class="md-inline-form" ng-submit='vm.updateReport()'>
+            <md-input-container class="md-block">
+                <label >Name (required)</label>
+                <input ng-model="vm.element.title" type="text" required>
+            </md-input-container>
+      
+            <div layout>
+              <md-select flex placeholder="Select Category" 
+                ng-model="vm.element.parent_category">
+
+                <md-option ng-value="category._id" ng-repeat="category in vm.categories">
+                  {{category.name}}
+                </md-option>
+              </md-select>
+            </div>  
+
+            <div layout> 
+
+              <md-select flex placeholder="Select Template (Required)" 
+                ng-model="vm.element.template" >
+                <md-option
+                  ng-value="template.id" 
+                  ng-repeat="template in vm.templates">
+                 {{template.name}}
+                </md-option>
+              </md-select>
+            </div>   
+            
+            <div layout="row" layout-align="space-between center">
+              <md-button type='submit' ng-disabled='vm.element.template === undefined' class="send-button md-accent md-raised" aria-label="Send">
+                ADD REPORT
+              </md-button>
+
+              <md-button class="md-icon-button" aria-label="Delete">
+                <md-icon md-font-icon="icon-delete"></md-icon>
+              </md-button>
+            </div>
+          </form>
+        </md-dialog-content>
+    </div>
+</md-dialog>

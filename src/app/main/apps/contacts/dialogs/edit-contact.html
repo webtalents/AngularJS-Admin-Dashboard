@@ -1,0 +1,25 @@
+<md-dialog class="edit-contact-dialog" aria-label="New Message">
+  <md-toolbar class="md-accent md-hue-2">
+      <div class="md-toolbar-tools" layout="row" layout-align="space-between center">
+          <span class="title" >Edit Contacts</span>
+          <md-button class="md-icon-button" ng-click="vm.hide()" aria-label="Close dialog">
+              <md-icon md-font-icon="icon-close"></md-icon>
+          </md-button>
+      </div>
+  </md-toolbar>
+
+  <md-dialog-content >
+    <text-angular ta-toolbar='vm.toolbar' ng-model="vm.text"></text-angular>
+  </md-dialog-content>
+
+  <md-dialog-actions layout="row" layout-align="space-between center">
+    <div layout="row" layout-align="start center">
+        <md-button ng-click="vm.save()" 
+          class="send-button md-accent md-raised" aria-label="Send" >
+            SAVE UPDATES
+        </md-button>
+    </div>
+
+</md-dialog-actions>
+
+</md-dialog>

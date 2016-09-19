@@ -1,0 +1,74 @@
+{
+    "data": [
+        {
+            "id": 1,
+            "name": "Awaiting check payment",
+            "color": "md-blue-500-bg"
+        },
+        {
+            "id": 2,
+            "name": "Payment accepted",
+            "color": "md-green-500-bg"
+        },
+        {
+            "id": 3,
+            "name": "Preparing the order",
+            "color": "md-orange-500-bg"
+        },
+        {
+            "id": 4,
+            "name": "Shipped",
+            "color": "md-purple-500-bg"
+        },
+        {
+            "id": 5,
+            "name": "Delivered",
+            "color": "md-green-800-bg"
+        },
+        {
+            "id": 6,
+            "name": "Canceled",
+            "color": "md-pink-500-bg"
+        },
+        {
+            "id": 7,
+            "name": "Refunded",
+            "color": "md-red-500-bg"
+        },
+        {
+            "id": 8,
+            "name": "Payment error",
+            "color": "md-red-900-bg"
+        },
+        {
+            "id": 9,
+            "name": "On pre-order (paid)",
+            "color": "md-purple-300-bg"
+        },
+        {
+            "id": 10,
+            "name": "Awaiting bank wire payment",
+            "color": "md-blue-500-bg"
+        },
+        {
+            "id": 11,
+            "name": "Awaiting PayPal payment",
+            "color": "md-blue-500-bg"
+        },
+        {
+            "id": 12,
+            "name": "Remote payment accepted",
+            "color": "md-green-500-bg"
+        },
+        {
+            "id": 13,
+            "name": "On pre-order (not paid)",
+            "color": "md-purple-300-bg"
+        },
+        {
+            "id": 14,
+            "name": "Awaiting Cash-on-delivery payment",
+            "color": "md-blue-500-bg"
+        }
+    ]
+}

@@ -1,0 +1,217 @@
+
+<md-dialog class="report-info-dialog tcn-expat" aria-label="New Message">
+  <form class="md-inline-form " >
+      <md-toolbar class="md-accent md-hue-2">
+          <div class="md-toolbar-tools" layout="row" layout-align="space-between center">
+              <span class="title" >TCN OFFSHORE</span>
+              <md-button class="md-icon-button" ng-click="vm.hide()" aria-label="Close dialog">
+                  <md-icon md-font-icon="icon-close"></md-icon>
+              </md-button>
+          </div>
+      </md-toolbar>
+
+      <md-dialog-content ms-scroll>
+        
+        <div layout style="position: relative" ng-hide='vm.propertiesChanging'> 
+
+          <md-button class="md-icon-button edit-button" aria-label="Settings" 
+            ng-click="vm.changeProperties()">
+            <md-icon md-font-icon="icon-border-color"></md-icon>
+          </md-button>
+
+          <div flex='30' class='ph-8'>
+            <label >Entity</label>
+            <md-select flex placeholder="Select Entity From List" 
+              aria-label='aria-label' ng-model="vm.reportInfo.entity">
+              <md-option ng-value="property" ng-repeat="property in vm.properties">
+                {{property}}
+              </md-option>
+            </md-select>
+          </div>
+
+          <div flex='20' class='ph-8'>
+            <label >Declaration</label>
+            <md-select flex placeholder="WC - Non USA" 
+              aria-label='aria-label' ng-model="vm.reportInfo.declaration">
+              <md-option ng-value="user" ng-repeat="user in [1,2,3]">{{user}}</md-option>
+            </md-select>
+          </div>
+
+          <div flex='20' class='ph-8'>
+            <label >Month</label>
+            <md-select flex placeholder="Select Month" 
+              aria-label='aria-label' ng-model="vm.reportInfo.month">
+              <md-option ng-value="user" ng-repeat="user in [1,2,3]">{{user}}</md-option>
+            </md-select>
+          </div>
+
+          <div flex='20' class='ph-8'>
+            <label >Currency</label>
+            <md-select flex placeholder="Select Currency" 
+              aria-label='aria-label' ng-model="vm.reportInfo.currency">
+              <md-option ng-value="user" ng-repeat="user in [1,2,3]">{{user}}</md-option>
+            </md-select>
+          </div>
+
+          <div flex='10' class='ph-8'>
+            <label >Exch Rate</label>
+            <md-input-container class="md-block" ng-init='vm.reportInfo.rate = "1.00"'>
+              <input aria-label='aria-label' ng-model="vm.reportInfo.rate"  type="text">
+            </md-input-container>
+          </div>
+        </div>  
+
+        <div ng-show='vm.propertiesChanging'>
+
+          <div layout layout-wrap class='add-properties'>
+
+            <md-input-container class="md-block" flex='20' 
+              ng-repeat='(key, property) in vm.properties track by $index'>
+              <label >Property №{{ key + 1 }}</label>
+              <input ng-model="vm.properties[key]" type="text" placeholder="title" required>
+              <md-icon class='md-warn' 
+                ng-click='vm.remove(key)'
+                md-font-icon="icon-delete" style='cursor:pointer'>
+              </md-icon>
+            </md-input-container>
+            
+          </div> 
+          
+          <div>
+            <md-button  aria-label="add property" class='' ng-click='vm.addProperty()'>
+              Add new property
+            </md-button>
+            <md-button  aria-label="save" class='md-accent md-button' ng-click='vm.save()'>
+              Save
+            </md-button>
+            <md-button  aria-label="Delete" class='md-warn md-button' ng-click='vm.reset()'>
+              Reset
+            </md-button>
+            <md-button  aria-label="Delete" class=' md-button' ng-click='vm.close()'>
+              Close
+            </md-button>
+          </div>
+
+          <hr>
+        </div>
+
+        <div layout> 
+          <div flex='20' class='ph-8'>
+            <label >Prepared By</label>
+            <md-input-container class="md-block" ng-init='vm.reportInfo.rate = "1.00"'>
+              <input aria-label='aria-label' ng-model="vm.reportInfo.prepared"  type="text">
+            </md-input-container>
+          </div>
+
+          <div flex='16' class='ph-8'>
+            <label >Phone By</label>
+            <md-input-container class="md-block" ng-init='vm.reportInfo.rate = "1.00"'>
+              <input aria-label='aria-label' ng-model="vm.reportInfo.phone"  type="text">
+            </md-input-container>
+          </div>
+
+          <div flex='16' class='ph-8'>
+            <label >Skype By</label>
+            <md-input-container class="md-block" ng-init='vm.reportInfo.rate = "1.00"'>
+              <input aria-label='aria-label' ng-model="vm.reportInfo.skype"  type="text">
+            </md-input-container>
+          </div>
+
+          <div flex='25' class='ph-8'>
+            <label >Email Address</label>
+            <md-input-container class="md-block" ng-init='vm.reportInfo.rate = "1.00"'>
+              <input aria-label='aria-label' ng-model="vm.reportInfo.email"  type="mail">
+            </md-input-container>
+          </div>
+        </div>
+
+        <div layout>
+          <div class="md-subhead text-center">
+            Please enter your Monthly Data Below - Should you need to enter more data, Further rows will appear if you have entered a Project name in the last available Project field. A maximum of 60 returns can be entered in this form.
+          </div>
+        </div>
+
+        <div class='fields-group mt-16'>
+          <div layout  class='ph-5 fields-group-headers'>
+
+            <div flex='30' class='ph-8'  layout-align="center end">
+              <span>Project</span>
+            </div>
+
+            <div flex='10' class='ph-8'>
+             <span>Headcount</span>
+            </div>
+
+            <div flex='10' class='ph-8'>
+              <span>Offshore Wages</span>
+            </div>
+
+            <div flex='10' class='ph-8'>
+              <span>PA&I Offshore TCN Premium</span>
+            </div>
+
+            <div flex='40' class='ph-8'>
+              <span>Comments</span>
+            </div>
+
+            
+          </div>
+          <br>
+          <div layout ng-repeat='(num, project) in [1,2,3,4,5,6,7,8,9,10]' class='ph-5'>
+
+            <span>{{num + 1}}</span>
+
+            <div flex='30' class='ph-8'>
+              <md-input-container class="md-block" >
+                <input  aria-label='aria-label' ng-model="vm.reportInfo.prepared"  type="text">
+              </md-input-container>
+            </div>
+
+            <div flex='10' class='ph-8'>
+              <md-input-container class="md-block">
+                <input  aria-label='aria-label' ng-model="vm.reportInfo.prepared"  type="text">
+              </md-input-container>
+            </div>
+
+
+            <div flex='10' class='ph-8'>
+              <md-input-container class="md-block">
+                <input  aria-label='aria-label' ng-model="vm.reportInfo.prepared"  type="text">
+              </md-input-container>
+            </div>
+
+            <div flex='10' class='ph-8'>
+              <md-input-container class="md-block">
+                <input  aria-label='aria-label' ng-model="vm.reportInfo.prepared"  type="text">
+              </md-input-container>
+            </div>
+
+            <div flex='40' class='ph-8'>
+              <md-input-container class="md-block" >
+                <input  aria-label='aria-label' ng-model="vm.reportInfo.prepared"  type="text">
+              </md-input-container>
+            </div>
+
+
+          </div>
+        </div>
+
+      </md-dialog-content>
+
+      <md-dialog-actions layout="row" layout-align="space-between center">
+          <div layout="row" layout-align="start center">
+              <md-button ng-click="vm.closeDialog()" 
+                class="send-button md-accent md-raised" aria-label="Send" >
+                  SUBMIT REPORT
+              </md-button>
+          </div>
+
+          <div layout="row">
+              <md-button class="md-icon-button" aria-label="Delete">
+                  <md-icon md-font-icon="icon-delete"></md-icon>
+              </md-button>
+          </div>
+      </md-dialog-actions>
+
+  </form>
+</md-dialog>

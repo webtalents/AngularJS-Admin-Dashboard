@@ -1,0 +1,75 @@
+<div id="reports" class="page-layout simple right-sidenav" layout="row">
+
+	<!-- CENTER -->
+	<div class="center" layout="column" flex>
+
+		<!-- HEADER -->
+		<!-- <div class="header md-accent-bg" style='background-color: 
+		{{main.interface.color}}'> -->
+		<div class="header md-accent-bg" >
+
+			<div class="header-content" layout="column" layout-align="space-between">
+
+				<!-- TOOLBAR -->
+				<div class="toolbar" layout="row" layout-align="space-between">
+					<div class='logo'>
+							<img 
+								ng-if='main.interface.logo_img_path' 
+								ng-src="{{ main.interface.logo_img_path }}" alt="logo-portal">
+						</div>
+				</div>
+				<!-- / TOOLBAR -->
+
+				<!-- BREADCRUMB -->
+				<div class="breadcrumb " layout="row" layout-align="space-between center">
+					<div>
+						<span data-ng-repeat="path in vm.path" 
+							ng-hide='vm.path.length === 1'
+							ng-click='vm.changePath(path.id)'>{{path.title}}
+							<md-icon md-font-icon="icon-chevron-right" class="icon separator"></md-icon>
+						</span>
+					</div>
+					
+				</div>
+				<!-- / BREADCRUMB -->
+			</div>
+
+			<!-- ADD FILE BUTTON -->
+			<div id="file-uploader"
+				 flow-init="vm.ngFlowOptions"
+				 flow-name="vm.ngFlow.flow"
+				 flow-files-submitted="vm.upload()"
+				 flow-file-added="vm.fileAdded($file)"
+				 flow-file-success="vm.fileSuccess($file, $message)"
+				 flow-complete="vm.uploadComplete()">
+
+				<md-button flow-btn class="add-file-button md-fab md-warn"
+					ng-click="vm.reportModal($event)" aria-label="Add file">
+					<md-icon md-font-icon="icon-plus"></md-icon>
+				</md-button>
+			</div>
+			<!-- / ADD FILE BUTTON -->
+		</div>
+		<!-- / HEADER -->
+
+		<!-- CONTENT -->
+		<md-content class="content" flex ms-scroll>
+			<div ng-if="vm.currentView === 'grid'"
+				ng-include="'app/main/apps/reports/views/grid/grid-view.html'"></div>
+			<div ng-if="vm.currentView === 'list'"
+				ng-include="'app/main/apps/reports/views/list/list-view.html'"></div>
+		</md-content>
+		<!-- / CONTENT -->
+
+	</div>
+	<!-- / CENTER -->
+
+	<!-- SIDENAV -->
+	<md-sidenav class="sidenav details-sidenav md-sidenav-right" md-is-locked-open="$mdMedia('gt-md')"
+				md-component-id="details-sidenav"
+				ng-include="'app/main/apps/reports/sidenavs/details/details-sidenav.html'" ms-scroll
+				ms-sidenav-helper>
+	</md-sidenav>
+	<!-- / SIDENAV -->
+
+</div>

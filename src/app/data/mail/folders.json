@@ -1,0 +1,46 @@
+{
+    "data": [
+        {
+            "id": 1,
+            "name": "inbox",
+            "title": "Inbox",
+            "icon": "icon-inbox"
+        },
+        {
+            "id": 2,
+            "name": "sent",
+            "title": "Sent",
+            "icon": "icon-send"
+        },
+        {
+            "id": 3,
+            "name": "drafts",
+            "title": "Drafts",
+            "icon": "icon-email-open"
+        },
+        {
+            "id": 4,
+            "name": "spam",
+            "title": "Spam",
+            "icon": "icon-alert-octagon"
+        },
+        {
+            "id": 5,
+            "name": "trash",
+            "title": "Trash",
+            "icon": "icon-delete"
+        },
+        {
+            "id": 6,
+            "name": "starred",
+            "title": "Starred",
+            "icon": "icon-star"
+        },
+        {
+            "id": 7,
+            "name": "important",
+            "title": "Important",
+            "icon": "icon-label"
+        }
+    ]
+}

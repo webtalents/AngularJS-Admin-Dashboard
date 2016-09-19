@@ -1,0 +1,34 @@
+{
+    "data": [
+        {
+            "id": "5725a6802d10e277a0f35739",
+            "name": "Family",
+            "color": "md-green-300-bg"
+        },
+        {
+            "id": "5725a6809fdd915739187ed5",
+            "name": "Work",
+            "color": ""
+        },
+        {
+            "id": "5725a68031fdbb1db2c1af47",
+            "name": "Todos",
+            "color": "md-yellow-300-bg"
+        },
+        {
+            "id": "5725a680606588342058356d",
+            "name": "Prior",
+            "color": "md-red-300-bg"
+        },
+        {
+            "id": "5725a6806acf030f9341e925",
+            "name": "Personal",
+            "color": "md-blue-300-bg"
+        },
+        {
+            "id": "5725a6806acf030f9341e932",
+            "name": "Friends",
+            "color": "md-orange-300-bg"
+        }
+    ]
+}

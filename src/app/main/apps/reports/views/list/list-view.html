@@ -1,0 +1,108 @@
+<!-- LIST VIEW -->
+<table class="simple list-view">
+	<thead>
+		<tr>
+			<th></th>
+			<th translate="FM.NAME">Name</th>
+			<th hide show-gt-sm translate="FM.TYPE">Type</th>
+			<th hide-xs translate="FM.OWNER">Owner</th>
+			<th hide-xs translate="FM.SIZE">Size</th>
+			<th hide show-gt-md translate="FM.LAST_MODIFIED">Last Modified</th>
+			<th hide-gt-md></th>
+		</tr>
+	</thead>
+
+	<tbody>
+		<tr ng-repeat="(key, folder) in vm.categories | filter:global.search" 
+			ng-class="{'selected' : vm.selected === folder}"
+			ng-class="{'selected' : vm.selected === file}"
+			ng-click='vm.select(folder);vm.openCategory(folder)'
+			ng-init='folder.icon = "icon-folder";folder.type = "folder"'>
+			<td class="file-icon">
+				<i class="icon-{{folder.type}}"></i>
+			</td>
+			<td class="name">{{folder.name}}</td>
+			<td class="type" hide show-gt-sm>{{folder.type}}</td>
+			<td class="owner" hide-xs>{{folder.owner}}</td>
+			<td class="size" hide-xs>{{folder.size === '' ? '-': folder.size}}</td>
+			<td class="last-modified" hide show-gt-md>{{folder.modified}}</td>
+			<td class="show-details" hide-gt-md>
+				<md-button class="md-icon-button sidenav-toggle" ng-click="vm.toggleDetails(folder)" aria-label="Toggle details sidenav">
+					<md-icon md-font-icon="icon-information-outline"></md-icon>
+				</md-button>
+			</td>
+			<td>
+				<div class="actions" layout="row" layout-align="start center">
+					<md-menu>
+
+						<md-button class="md-icon-button" aria-label="More" >
+							<md-icon md-font-icon="icon-dots-vertical" ng-click="$mdOpenMenu($event)"></md-icon>
+						</md-button>
+
+						<md-menu-content width="3">
+
+							<md-menu-item>
+								<md-button ng-click="vm.remove(folder, key, 'categories')">
+									Delete
+								</md-button>
+							</md-menu-item>
+
+							<md-menu-item>
+								<md-button ng-click="vm.update(folder, key, 'categories')">
+									Edit
+								</md-button>
+							</md-menu-item>
+
+						</md-menu-content>
+
+					</md-menu>
+				</div>
+			</td>
+		</tr>
+
+		<tr ng-repeat="(key, report) in vm.reports | filter:global.search" 
+			ng-click="vm.select(report); vm.reportInfoModal(report)"
+			ng-class="{'selected' : vm.selected === report}">
+			<td class="file-icon">
+				<i class="{{report.doc_filename}}"></i>
+			</td>
+			<td class="name">{{report.title}}</td>
+			<td class="type" hide show-gt-sm>{{report.doc_filename}}</td>
+			<td class="owner" hide-xs>{{report.owner}}</td>
+			<td class="size" hide-xs>{{report.size === '' ? '-': report.size}}</td>
+			<td class="last-modified" hide show-gt-md>{{report.modified}}</td>
+			<td class="show-details" hide-gt-md>
+				<md-button class="md-icon-button sidenav-toggle" ng-click="vm.toggleDetails(report)" aria-label="Details" translate translate-attr-aria-label="FM.DETAILS">
+					<md-icon md-font-icon="icon-information-outline"></md-icon>
+				</md-button>
+			</td>
+			<td>
+				<div class="actions" layout="row" layout-align="start center">
+					<md-menu>
+						<md-button class="md-icon-button" aria-label="More" >
+							<md-icon md-font-icon="icon-dots-vertical" ng-click="$mdOpenMenu($event)"></md-icon>
+						</md-button>
+
+						<md-menu-content width="3">
+
+							<md-menu-item>
+								<md-button ng-click="vm.remove(report, key, 'reports')">
+									Delete
+								</md-button>
+							</md-menu-item>
+
+							<md-menu-item>
+								<md-button ng-click="vm.update(report, key, 'reports')">
+									Edit
+								</md-button>
+							</md-menu-item>
+
+						</md-menu-content>
+					</md-menu>
+
+				</div>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<!-- / LIST VIEW -->

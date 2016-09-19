@@ -1,0 +1,272 @@
+{
+    "widget1": {
+        "ranges": {
+            "DY": "Yesterday",
+            "DT": "Today",
+            "DTM": "Tomorrow"
+        },
+        "currentRange": "DT",
+        "data": {
+            "label": "CONVERSION RATE",
+            "count": {
+                "DY": 21,
+                "DT": 25,
+                "DTM": 19
+            },
+            "extra": {
+                "label": "Abandoned carts",
+                "count": {
+                    "DY": 3,
+                    "DT": 7,
+                    "DTM": 8
+                }
+            }
+        },
+        "detail": "You can show some detailed information about this widget in here."
+    },
+    "widget2": {
+        "title": "Average Order Value",
+        "data": {
+            "label": "30 DAYS",
+            "count": 21,
+            "extra": {
+                "label": "Last year same time",
+                "count": 14
+            }
+        },
+        "detail": "You can show some detailed information about this widget in here."
+    },
+    "widget3": {
+        "title": "Online Visitors",
+        "data": {
+            "label": "last 30 minutes",
+            "count": 32,
+            "extra": {
+                "label": "Total visitors today",
+                "count": 998
+            }
+        },
+        "detail": "You can show some detailed information about this widget in here."
+    },
+    "widget4": {
+        "title": "Profit per Visitor",
+        "data": {
+            "label": "TODAY",
+            "count": "3,7",
+            "extra": {
+                "label": "Yesterday",
+                "count": "2,90"
+            }
+        },
+        "detail": "You can show some detailed information about this widget in here."
+    },
+    "widget5": {
+        "title": "Sales",
+        "ranges": {
+            "TW": "This Week",
+            "LW": "Last Week",
+            "2W": "2 Weeks Ago"
+        },
+        "mainChart": [
+            {
+                "key": "Sales",
+                "values": {
+                    "2W": [
+                        {"x": "Mon", "y": 9},
+                        {"x": "Tue", "y": 12},
+                        {"x": "Wed", "y": 9},
+                        {"x": "Thu", "y": 12},
+                        {"x": "Fri", "y": 7},
+                        {"x": "Sat", "y": 8},
+                        {"x": "Sun", "y": 16}
+                    ],
+                    "LW": [
+                        {"x": "Mon", "y": 12},
+                        {"x": "Tue", "y": 8},
+                        {"x": "Wed", "y": 7},
+                        {"x": "Thu", "y": 13},
+                        {"x": "Fri", "y": 7},
+                        {"x": "Sat", "y": 6},
+                        {"x": "Sun", "y": 10}
+                    ],
+                    "TW": [
+                        {"x": "Mon", "y": 11},
+                        {"x": "Tue", "y": 10},
+                        {"x": "Wed", "y": 8},
+                        {"x": "Thu", "y": 11},
+                        {"x": "Fri", "y": 8},
+                        {"x": "Sat", "y": 10},
+                        {"x": "Sun", "y": 17}
+                    ]
+                }
+            },
+            {
+                "key": "Abandoned Carts",
+                "values": {
+                    "2W": [
+                        {"x": "Mon", "y": 37},
+                        {"x": "Tue", "y": 32},
+                        {"x": "Wed", "y": 39},
+                        {"x": "Thu", "y": 27},
+                        {"x": "Fri", "y": 18},
+                        {"x": "Sat", "y": 24},
+                        {"x": "Sun", "y": 20}
+                    ],
+                    "LW": [
+                        {"x": "Mon", "y": 37},
+                        {"x": "Tue", "y": 24},
+                        {"x": "Wed", "y": 51},
+                        {"x": "Thu", "y": 31},
+                        {"x": "Fri", "y": 29},
+                        {"x": "Sat", "y": 17},
+                        {"x": "Sun", "y": 31}
+                    ],
+                    "TW": [
+                        {"x": "Mon", "y": 42},
+                        {"x": "Tue", "y": 28},
+                        {"x": "Wed", "y": 43},
+                        {"x": "Thu", "y": 34},
+                        {"x": "Fri", "y": 20},
+                        {"x": "Sat", "y": 25},
+                        {"x": "Sun", "y": 22}
+                    ]
+                }
+            }
+        ]
+    },
+    "widget6": {
+        "title": "Top 5 Categories",
+        "ranges": {
+            "TW": "This Week",
+            "LW": "Last Week",
+            "2W": "2 Weeks Ago"
+        },
+        "mainChart": [
+            {
+                "label": "Women Dresses",
+                "values": {
+                    "2W": 18,
+                    "LW": 17,
+                    "TW": 13
+                }
+            },
+            {
+                "label": "Men Shoes",
+                "values": {
+                    "2W": 12,
+                    "LW": 14,
+                    "TW": 16
+                }
+            },
+            {
+                "label": "Women Shoes",
+                "values": {
+                    "2W": 40,
+                    "LW": 36,
+                    "TW": 34
+                }
+            },
+            {
+                "label": "Women Bags",
+                "values": {
+                    "2W": 20,
+                    "LW": 23,
+                    "TW": 23
+                }
+            },
+            {
+                "label": "Men T-Shirts",
+                "values": {
+                    "2W": 10,
+                    "LW": 12,
+                    "TW": 14
+                }
+            }
+        ],
+        "footerLeft": {
+            "title": "Total Sales",
+            "count": {
+                "2W": 487,
+                "LW": 526,
+                "TW": 594
+            }
+        },
+        "footerRight": {
+            "title": "Sales From Top 5 Categories",
+            "count": {
+                "2W": 193,
+                "LW": 260,
+                "TW": 287
+            }
+        }
+    },
+    "widget7": {
+        "title": "Latest Customers",
+        "ranges": {
+            "T": "Today",
+            "TM": "Tomorrow"
+        },
+        "customers": {
+            "T": [
+                {
+                    "name": "Abbott Keitch",
+                    "location": "United States of America"
+                },
+                {
+                    "name": "Arnold Matlock",
+                    "location": "United States of America"
+                },
+                {
+                    "name": "Barrera Bradbury",
+                    "location": "England"
+                },
+                {
+                    "name": "Blair Strangeway",
+                    "location": "Germany"
+                },
+                {
+                    "name": "Copeland Redcliff",
+                    "location": "French"
+                },
+                {
+                    "name": "Henderson Cambias",
+                    "location": "Russia"
+                },
+                {
+                    "name": "Lily Peasegood",
+                    "location": "Mexico"
+                }
+            ],
+            "TM": [
+                {
+                    "name": "Boyle Winters",
+                    "location": "United States of America"
+                },
+                {
+                    "name": "Tyson Marshall",
+                    "location": "United States of America"
+                },
+                {
+                    "name": "Reyna Preece",
+                    "location": "England"
+                },
+                {
+                    "name": "Shauna Atherton",
+                    "location": "Germany"
+                },
+                {
+                    "name": "Tillman Lee",
+                    "location": "French"
+                },
+                {
+                    "name": "Velazquez Smethley",
+                    "location": "Russia"
+                },
+                {
+                    "name": "Helen Sheridan",
+                    "location": "Mexico"
+                }
+            ]
+        }
+    }
+}

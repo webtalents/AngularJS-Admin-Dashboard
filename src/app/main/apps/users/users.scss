@@ -1,0 +1,223 @@
+#users {
+    position: relative;
+
+    > .header {
+        height: 76px;
+        min-height: 76px;
+        max-height: 76px;
+        background-color: #122a4e !important;
+        .logo {
+
+            .logo-icon {
+                margin: 0 16px 0 0;
+            }
+
+            .logo-text {
+                font-size: 24px;
+            }
+        }
+
+        md-icon {
+            color: #FFFFFF;
+        }
+
+        .search-input-wrapper {
+            position: relative;
+
+            label {
+                padding-right: 4px;
+                cursor: pointer;
+
+                md-icon {
+                    color: rgba(255, 255, 255, 0.8);
+                }
+
+            }
+
+            md-input-container {
+
+                .md-errors-spacer {
+                    display: none;
+                }
+
+                input {
+                    border-bottom: 1px solid rgba(255, 255, 255, 0.8);
+                    color: rgba(255, 255, 255, 0.8);
+                    width: 240px;
+
+                    &::placeholder {
+                        color: rgba(255, 255, 255, 0.8);
+                    }
+
+                    &:focus {
+                        border-bottom: 1px solid white;
+                        color: white;
+                    }
+
+                }
+            }
+        }
+
+        &.selected-bar {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 999;
+            background-image: none;
+            opacity: 1 !important;
+
+            .close-button-wrapper {
+                width: 244px;
+            }
+
+        }
+
+    }
+
+    > .content {
+        position: absolute;
+        top: 76px;
+        bottom: 0;
+        right: 0;
+        left: 0;
+
+        > md-sidenav {
+            box-shadow: $whiteframe-shadow-1dp;
+        }
+
+        .main {
+            width: 100%;
+            height: 100%;
+
+            .users-list {
+                position: relative;
+                padding-bottom: 0;
+
+                .md-subheader {
+                    box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.14);
+                    border-bottom: 1px solid rgba(0, 0, 0, 0.14);
+
+                    .users-count {
+                        padding-left: 4px;
+                    }
+
+                    .list-title {
+                        margin-right: 4px;
+                    }
+
+                    .edit-group-form {
+
+                        .editable-controls {
+                            display: flex;
+                            flex-direction: row;
+                            align-items: center;
+                            justify-content: flex-start;
+
+                            .editable-input {
+                                border: 1px solid rgba(0, 0, 0, 0.2);
+                                padding: 4px 6px;
+                                margin-right: 6px;
+                                font-size: 13px;
+                            }
+
+                            .editable-buttons {
+
+                            }
+                        }
+
+                        .edit-group-button {
+                            margin: 0;
+                        }
+
+                        .md-button {
+                            margin: 0;
+                            margin: 0;
+                            padding: 0;
+                            height: 32px;
+                            min-height: 32px;
+                            line-height: 32px;
+                            width: 32px;
+                        }
+                    }
+                }
+
+                .user-item {
+                    position: absolute;
+                    right: 0;
+                    left: 0;
+                    width: 100%;
+                    box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.14);
+                    background: white;
+                    transition: transform 200ms ease-out;
+                    will-change: transform;
+
+                    &:last-of-type {
+                        margin-bottom: 24px;
+                    }
+
+                    &.ng-leave {
+                        transform: translateY(0);
+                        display: none;
+
+                        &.ng-leave-active {
+                            transform: translateY(-100%);
+                        }
+                    }
+
+                    &.ng-hide {
+                        display: none;
+                    }
+
+                    &.ng-hide-add-active,
+                    &.ng-hide-remove-active {
+                        display: block;
+                        transition-property: all;
+                    }
+
+                }
+            }
+
+            .no-results {
+                box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.14);
+            }
+
+        }
+    }
+
+    #add-user-button {
+        position: fixed;
+        bottom: 8px;
+        right: 8px;
+        padding: 0;
+    }
+
+}
+
+.create-user-dialog {
+    width: 700px;
+    max-width: 100%;
+
+    md-input-container {
+        margin: 7px 0 !important;
+    }
+}
+
+// RESPONSIVE
+@media screen and (max-width: $layout-breakpoint-md) {
+
+    #users {
+
+        > .content {
+
+            .main {
+                left: 24px;
+            }
+
+            > md-sidenav {
+                padding: 0;
+            }
+
+        }
+    }
+}

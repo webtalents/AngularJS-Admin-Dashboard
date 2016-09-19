@@ -1,0 +1,287 @@
+{
+    "data": {
+        "id": "32gfhaf2",
+        "name": "ACME Frontend Application",
+        "uri": "acme-frontend-application",
+        "settings": {
+            "color": "",
+            "subscribed": false,
+            "cardCoverImages": true
+        },
+        "lists": [
+            {
+                "id": "56027cf5a2ca3839a5d36103",
+                "name": "Designs",
+                "idCards": [
+                    "5603a2a3cab0c8300f6096b3"
+                ]
+            },
+            {
+                "id": "56127cf2a2ca3539g7d36103",
+                "name": "Development",
+                "idCards": [
+                    "2837273da9b93dd84243s0f9",
+                    "5787b7e4740c57bf0dffd5b6",
+                    "5637273da9b93bb84743a0f9"
+                ]
+            },
+            {
+                "id": "faf244627326f1249525763d",
+                "name": "Upcoming Features",
+                "idCards": [
+                    "d9005a4b89ed2aadca48a6ad",
+                    "f6b9d7a9247e5d794a081927"
+                ]
+            }
+        ],
+        "cards": [
+            {
+                "id": "2837273da9b93dd84243s0f9",
+                "name": "Update Generators",
+                "description": "",
+                "idAttachmentCover": "",
+                "idMembers": [
+                    "26027s1930450d8bf7b10828"
+                ],
+                "idLabels": [
+                    "26022e4129ad3a5sc28b36cd"
+                ],
+                "attachments": [],
+                "subscribed": false,
+                "checklists": [],
+                "checkItems": 0,
+                "checkItemsChecked": 0,
+                "comments": [],
+                "activities": [],
+                "due": null
+            },
+            {
+                "id": "5603a2a3cab0c8300f6096b3",
+                "name": "Change Background Color",
+                "description": "",
+                "idAttachmentCover": "56027cfcbe1b72ecf1fc452a",
+                "idMembers": [
+                    "76027g1930450d8bf7b10958"
+                ],
+                "idLabels": [
+                    "56027e4119ad3a5dc28b36cd",
+                    "5640635e19ad3a5dc21416b2"
+                ],
+                "attachments": [
+                    {
+                        "id": "56027cfcbe1b72ecf1fc452a",
+                        "name": "calendar-app-design.jpg",
+                        "src": "assets/images/scrumboard/calendar-app-design.jpg",
+                        "time": "Added Nov 1 at 12:34PM",
+                        "type": "image"
+                    },
+                    {
+                        "id": "67027cahbe3b52ecf2dc631c",
+                        "url": "assets/images/scrumboard/calendar-app-design.jpg",
+                        "time": "Added Nov 3 at 15:22AM",
+                        "type": "link"
+                    }
+                ],
+                "subscribed": true,
+                "checklists": [
+                    {
+                        "id": "63021cfdbe1x72wcf1fc451v",
+                        "name": "Checklist",
+                        "checkItemsChecked": 1,
+                        "checkItems": [
+                            {
+                                "name": "Implement a calendar library",
+                                "checked": false
+                            },
+                            {
+                                "name": "Replace event colors with Material Design colors",
+                                "checked": true
+                            },
+                            {
+                                "name": "Replace icons with Material Design icons",
+                                "checked": false
+                            },
+                            {
+                                "name": "Use moment.js",
+                                "checked": false
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Checklist 2",
+                        "id": "74031cfdbe1x72wcz1dc166z",
+                        "checkItemsChecked": 1,
+                        "checkItems": [
+                            {
+                                "name": "Replace event colors with Material Design colors",
+                                "checked": true
+                            },
+                            {
+                                "name": "Replace icons with Material Design icons",
+                                "checked": false
+                            },
+                            {
+                                "name": "Use moment.js",
+                                "checked": false
+                            }
+                        ]
+                    }
+                ],
+                "checkItems": 7,
+                "checkItemsChecked": 2,
+                "comments": [
+                    {
+                        "idMember": "56027c1930450d8bf7b10758",
+                        "message": "We should be able to add moment.js without any problems",
+                        "time": "12 mins. ago"
+                    },
+                    {
+                        "idMember": "36027j1930450d8bf7b10158",
+                        "message": "I added a link for a page that might help us deciding the colors",
+                        "time": "30 mins. ago"
+                    }
+                ],
+                "activities": [
+                    {
+                        "idMember": "56027c1930450d8bf7b10758",
+                        "message": "added a comment",
+                        "time": "12 mins. ago"
+                    },
+                    {
+                        "idMember": "36027j1930450d8bf7b10158",
+                        "message": "added a comment",
+                        "time": "30 mins. ago"
+                    },
+                    {
+                        "idMember": "36027j1930450d8bf7b10158",
+                        "message": "attached a link",
+                        "time": "45 mins. ago"
+                    }
+                ],
+                "due": "1452229200000"
+            },
+            {
+                "id": "5637273da9b93bb84743a0f9",
+                "name": "Fix Splash Screen bugs",
+                "description": "",
+                "idAttachmentCover": "",
+                "idMembers": [
+                    "56027c1930450d8bf7b10758"
+                ],
+                "idLabels": [
+                    "5640635e19ad3a5dc21416b2"
+                ],
+                "attachments": [],
+                "subscribed": true,
+                "checklists": [],
+                "checkItems": 0,
+                "checkItemsChecked": 0,
+                "comments": [],
+                "activities": [],
+                "due": null
+            },
+            {
+                "id": "d9005a4b89ed2aadca48a6ad",
+                "name": "Add Alternative Authentication Pages",
+                "description": "",
+                "idAttachmentCover": "",
+                "idMembers": [
+                    "36027j1930450d8bf7b10158"
+                ],
+                "idLabels": [
+                    "6540635g19ad3s5dc31412b2"
+                ],
+                "attachments": [],
+                "subscribed": false,
+                "checklists": [],
+                "checkItems": 0,
+                "checkItemsChecked": 0,
+                "comments": [],
+                "activities": [],
+                "due": null
+            },
+            {
+                "id": "5787b7e4740c57bf0dffd5b6",
+                "name": "Fix the console",
+                "description": "",
+                "idAttachmentCover": "",
+                "idMembers": [],
+                "idLabels": [
+                    "26022e4129ad3a5sc28b36cd"
+                ],
+                "attachments": [],
+                "subscribed": true,
+                "checklists": [],
+                "checkItems": 0,
+                "checkItemsChecked": 0,
+                "comments": [],
+                "activities": [],
+                "due": "1454025600000"
+            },
+            {
+                "id": "f6b9d7a9247e5d794a081927",
+                "name": "New Media Player",
+                "description": "",
+                "idAttachmentCover": "",
+                "idMembers": [
+                    "76027g1930450d8bf7b10958"
+                ],
+                "idLabels": [
+                    "5640635e19ad3a5dc21416b2"
+                ],
+                "attachments": [],
+                "subscribed": false,
+                "checklists": [],
+                "checkItems": 0,
+                "checkItemsChecked": 0,
+                "comments": [],
+                "activities": [],
+                "due": null
+            }
+        ],
+        "members": [
+            {
+                "id": "56027c1930450d8bf7b10758",
+                "name": "Alice Freeman",
+                "avatar": "assets/images/avatars/alice.jpg"
+            },
+            {
+                "id": "26027s1930450d8bf7b10828",
+                "name": "Danielle Obrien",
+                "avatar": "assets/images/avatars/danielle.jpg"
+            },
+            {
+                "id": "76027g1930450d8bf7b10958",
+                "name": "James Lewis",
+                "avatar": "assets/images/avatars/james.jpg"
+            },
+            {
+                "id": "36027j1930450d8bf7b10158",
+                "name": "Vincent Munoz",
+                "avatar": "assets/images/avatars/vincent.jpg"
+            }
+        ],
+        "labels": [
+            {
+                "id": "26022e4129ad3a5sc28b36cd",
+                "name": "High Priority",
+                "color": "red"
+            },
+            {
+                "id": "56027e4119ad3a5dc28b36cd",
+                "name": "Design",
+                "color": "orange"
+            },
+            {
+                "id": "5640635e19ad3a5dc21416b2",
+                "name": "App",
+                "color": "blue"
+            },
+            {
+                "id": "6540635g19ad3s5dc31412b2",
+                "name": "Feature",
+                "color": "green"
+            }
+        ]
+    }
+}
